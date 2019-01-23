@@ -16,8 +16,8 @@
     
 	<!-- Import all available sensors -->
 	<xacro:include filename="$(find robotnik_sensors)/urdf/all_sensors.urdf.xacro" />
-
         <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+
 	<!-- ***************** -->
 	<!-- Global parameters -->
 	<!-- ***************** -->
