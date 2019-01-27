@@ -6,8 +6,8 @@
   <arg name="global_frame" default="map"/> 
   <arg name="odom_frame" default="odom"/> 
   <arg name="base_frame" default="base_footprint"/>
-  <arg name="laser_frame" default="front_laser_base_link"/>
-  <arg name="scan_topic" default="lidar/scan"/>
+  <arg name="laser_frame" default="base_link"/>
+  <arg name="scan_topic" default="velodyne/scan"/>
   
   <!-- Run move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base">
@@ -31,7 +31,8 @@
 		<param name="TebLocalPlannerROS/odom_topic" value="$(arg odom_topic)"/>
 		<param name="controller_frequency" value="5.0"/>
     <param name="controller_patience" value="15.0"/>
-    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /> 
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+	<param name="base_global_planner" value="navfn/NavfnROS" /> 
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)" /> 
     <remap from="odom" to="$(arg odom_topic)" />        
   </node>

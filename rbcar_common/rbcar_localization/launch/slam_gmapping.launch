@@ -41,5 +41,9 @@
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
     </node>
+
+    <!-- Launch map -->
+    <include file="$(find rbcar_localization)/launch/map_server.launch" />
+
 </launch>
 

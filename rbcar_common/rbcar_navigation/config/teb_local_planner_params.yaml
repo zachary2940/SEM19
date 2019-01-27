@@ -17,12 +17,12 @@ TebLocalPlannerROS:
           
   max_vel_x: 10.0
   max_vel_x_backwards: 0.0
-  max_vel_y: 0.4
-  max_vel_theta: 0.4
+  max_vel_y: 0.0
+  max_vel_theta: 0.2
   acc_lim_x: 2.0
-  acc_lim_y: 0.2
-  acc_lim_theta: 0.2
-  min_turning_radius: 1.0
+  acc_lim_y: 0.5
+  acc_lim_theta: 0.1
+  min_turning_radius: 4.5
   wheelbase: 2.5
   cmd_angle_instead_rotvel: true # set true in ackermann mode
   footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"

@@ -11,6 +11,11 @@
 
   <!-- Combine joint values -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+  
+  <!-- tele op -->
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop">
+    <remap from="cmd_vel" to="/rbcar/cmd_vel" />
+  </node>
 
   <!-- Show in Rviz   -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rbcar_description)/launch/rbcar.rviz"/> 
