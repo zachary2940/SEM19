@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
         <!-- maps inside the folder rbcar_localization/maps -->
-	<arg name="map_file" default="gas_station.yaml"/>
+	<arg name="map_file" default="gas_station2.yaml"/>
 	<arg name="frame_id" default="map"/>
 
 	<!-- Run the map server -->
