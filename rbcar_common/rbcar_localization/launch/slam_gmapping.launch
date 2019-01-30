@@ -2,7 +2,7 @@
 <launch>
 	
 	<arg name="prefix" default="rbcar"/>
-	<arg name="scan_topic" default="velodyne/scan"/>
+	<arg name="scan_topic" default="front_laser/scan"/>
 	<arg name="map_frame" default="map"/> 
 	<arg name="odom_frame" default="odom"/> 
 	<arg name="base_frame" default="base_link"/> 

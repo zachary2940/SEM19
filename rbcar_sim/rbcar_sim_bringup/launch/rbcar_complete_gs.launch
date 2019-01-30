@@ -9,8 +9,11 @@
 
   <!-- start laser filter -->
   <include file="$(find rbcar_sim_bringup)/launch/my_laser_filter.launch"/>
-  <node name="laser_bounds_filter" type="laser_bounds_filter" pkg="rbcar_navigation" />
   
+  <!-- start twist to ackerman converter -->
+  <node pkg="rbcar_nav" type="cmd_vel_to_ackermann_drive.py" name="cmd_vel_to_ackermann_drive"    	output="screen">
+  </node>
+
   <!-- start pointcloud to laser scan -->
   <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
 
