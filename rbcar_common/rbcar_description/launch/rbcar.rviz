@@ -192,34 +192,33 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_footprint:
-          base_link:
-            front_laser_base_link:
-              {}
-            gps_base_link:
-              {}
-            imu_link:
-              {}
-            left_rear_axle_carrier:
-              left_rear_wheel:
-                {}
-            left_steering_link:
-              left_front_axle_carrier:
-                left_front_wheel:
-                  {}
-            right_rear_axle_carrier:
-              right_rear_wheel:
-                {}
-            right_steering_link:
-              right_front_axle_carrier:
-                right_front_wheel:
-                  {}
-            velodyne_base_link:
-              velodyne:
-                {}
         map:
           odom:
-            {}
+            base_footprint:
+              base_link:
+                front_laser_base_link:
+                  {}
+                gps_base_link:
+                  {}
+                imu_link:
+                  {}
+                left_rear_axle_carrier:
+                  left_rear_wheel:
+                    {}
+                left_steering_link:
+                  left_front_axle_carrier:
+                    left_front_wheel:
+                      {}
+                right_rear_axle_carrier:
+                  right_rear_wheel:
+                    {}
+                right_steering_link:
+                  right_front_axle_carrier:
+                    right_front_wheel:
+                      {}
+                velodyne_base_link:
+                  velodyne:
+                    {}
       Update Interval: 0
       Value: true
     - Alpha: 0.699999988
@@ -263,6 +262,22 @@ Visualization Manager:
       Use rainbow: true
       Value: true
     - Alpha: 1
+      Arrow Length: 0.300000012
+      Axes Length: 0.300000012
+      Axes Radius: 0.00999999978
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.0700000003
+      Head Radius: 0.0299999993
+      Name: PoseArray
+      Shaft Length: 0.230000004
+      Shaft Radius: 0.00999999978
+      Shape: Arrow (Flat)
+      Topic: /particlecloud
+      Unreliable: false
+      Value: true
+    - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
@@ -282,13 +297,13 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /move_base/TebLocalPlannerROS/global_plan
+      Topic: /move_base/global_plan
       Unreliable: false
       Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
-      Color: 255; 255; 0
+      Color: 25; 255; 255
       Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
@@ -305,7 +320,7 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /move_base/TebLocalPlannerROS/local_plan
+      Topic: /move_base/local_plan
       Unreliable: false
       Value: true
   Enabled: true
@@ -333,7 +348,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 22.1280975
+      Distance: 73.9670105
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1

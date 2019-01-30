@@ -2,9 +2,9 @@
 <launch>
 
 <arg name="x_init_pose" default="0"/>
-<arg name="y_init_pose" default="0"/>
-<arg name="z_init_pose" default="0"/>
-<arg name="scan_topic" default="lidar/scan"/>
+<arg name="y_init_pose" default="-8"/>
+<arg name="z_init_pose" default="-1"/>
+<arg name="scan_topic" default="velodyne/scan"/>
 <arg name="map_topic" default="map"/>
 <arg name="global_frame" default="map"/>
 <arg name="odom_frame" default="odom"/>
@@ -57,5 +57,8 @@
   <param name="initial_pose_a" value ="0.0"/>
 
 </node>
+
+<!-- start map server node -->
+<include file="$(find rbcar_localization)/launch/map_server.launch"/>
 
 </launch>
