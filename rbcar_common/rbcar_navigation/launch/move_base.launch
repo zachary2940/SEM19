@@ -11,7 +11,7 @@
 
   <arg name="sbpl_resolution" default="0.04" />
 
-  <remap from="/scan" to="/front_laser/scan" />
+  <remap from="/scan" to="/velodyne/scan" />
   
   <!-- Launch move base -->
   <node
