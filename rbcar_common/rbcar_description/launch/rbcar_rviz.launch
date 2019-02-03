@@ -10,7 +10,7 @@
   </node>
 
   <!-- Combine joint values -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+  <node name="robot_state_publisher_rviz" pkg="robot_state_publisher" type="state_publisher"/>
   
   <!-- tele op -->
   <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop">
