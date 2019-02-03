@@ -55,12 +55,19 @@
       value="$(find rbcar_nav)/config/global_planners/sbpl/motion_primitives/four_wheel_steer_$(arg sbpl_resolution).mprim" />
 
     <rosparam
-      file="$(find rbcar_nav)/config/local_planners/$(arg local)/base_local_planner_params.yaml"
+      file="$(find rbcar_nav)/config/local_planners/$(arg local)/base_local_planner_tut_params.yaml"
       command="load" />
 
     <rosparam
       file="$(find rbcar_nav)/config/costmaps/costmap_converter_params.yaml"
       command="load" />
+    <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+    <param name="planner_frequency" value="1.0" />
+    <param name="planner_patience" value="5.0" />
+
+    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+    <param name="controller_frequency" value="5.0" />
+    <param name="controller_patience" value="15.0" />
 
     <!-- remap planner topics for rviz -->
     <remap
