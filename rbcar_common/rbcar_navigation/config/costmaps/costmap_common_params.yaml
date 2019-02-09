@@ -14,9 +14,31 @@ obstacle_layer:
  inflation_radius: 0.2
  track_unknown_space: false
  combination_method: 1
-
- observation_sources: laser_scan_sensor
- laser_scan_sensor: {data_type: LaserScan, topic: scan, marking: true, clearing: true}
+ observation_sources: point_cloud_lidar point_cloud_camera
+ point_cloud_lidar: {
+   data_type: PointCloud2, 
+   topic: velodyne_points, 
+   min_obstacle_height: 0.2, 
+   max_obstacle_height: 2.5, 
+   obstacle_range: 50.0, 
+   raytrace_range: 55.0,
+   observation_persistence: 0.0,
+   marking: true, 
+   clearing: true
+   }
+ point_cloud_camera: {
+   data_type: PointCloud2, 
+   topic: kinect/depth/points, 
+   min_obstacle_height: 0.2, 
+   max_obstacle_height: 2.5, 
+   obstacle_range: 20.0, 
+  raytrace_range: 20.5,
+   observation_persistence: 0.0,
+   marking: true, 
+   clearing: true
+   }
+#  observation_sources: laser_scan_sensor
+#  laser_scan_sensor: {data_type: LaserScan, topic: scan, marking: true, clearing: true}
 
 
 inflation_layer:

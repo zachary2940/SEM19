@@ -43,7 +43,7 @@
     </node>
 
     <!-- Launch map -->
-    <include file="$(find rbcar_localization)/launch/map_server.launch" />
+    <!-- <include file="$(find rbcar_localization)/launch/map_server.launch" /> -->
 
 </launch>
 

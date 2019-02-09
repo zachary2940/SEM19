@@ -83,6 +83,27 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        kinect_depth_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        kinect_depth_optical_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        kinect_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        kinect_rgb_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        kinect_rgb_optical_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         left_front_axle_carrier:
           Alpha: 1
           Show Axes: false
@@ -158,6 +179,16 @@ Visualization Manager:
           Value: true
         imu_link:
           Value: true
+        kinect_depth_link:
+          Value: true
+        kinect_depth_optical_link:
+          Value: true
+        kinect_link:
+          Value: true
+        kinect_rgb_base_link:
+          Value: true
+        kinect_rgb_optical_link:
+          Value: true
         left_front_axle_carrier:
           Value: true
         left_front_wheel:
@@ -202,6 +233,14 @@ Visualization Manager:
                   {}
                 imu_link:
                   {}
+                kinect_rgb_base_link:
+                  kinect_depth_link:
+                    kinect_depth_optical_link:
+                      {}
+                  kinect_link:
+                    {}
+                  kinect_rgb_optical_link:
+                    {}
                 left_rear_axle_carrier:
                   left_rear_wheel:
                     {}
@@ -323,6 +362,16 @@ Visualization Manager:
       Topic: /move_base/local_plan
       Unreliable: false
       Value: true
+    - Alpha: 0.699999988
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /move_base/local_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -348,7 +397,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 33.3684044
+      Distance: 46.8802071
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
