@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <launch>
 
-<arg name="x_init_pose" default="0"/>
-<arg name="y_init_pose" default="-8"/>
-<arg name="z_init_pose" default="-1"/>
+<arg name="x_init_pose" default="-5"/>
+<arg name="y_init_pose" default="0"/>
+<arg name="z_init_pose" default="0"/>
 <arg name="scan_topic" default="velodyne/scan"/>
 <arg name="map_topic" default="map"/>
 <arg name="global_frame" default="map"/>
