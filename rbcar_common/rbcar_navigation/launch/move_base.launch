@@ -55,7 +55,7 @@
       value="$(find rbcar_nav)/config/global_planners/sbpl/motion_primitives/four_wheel_steer_$(arg sbpl_resolution).mprim" />
 
     <rosparam
-      file="$(find rbcar_nav)/config/local_planners/$(arg local)/base_local_planner_tut_params.yaml"
+      file="$(find rbcar_nav)/config/local_planners/$(arg local)/base_local_planner_test.yaml"
       command="load" />
 
     <rosparam
