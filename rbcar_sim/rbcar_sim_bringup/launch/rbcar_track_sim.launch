@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- start gazebo simulation -->
+  <include file="$(find rbcar_gazebo)/launch/rbcar_track.launch"/>
+
+  <!-- start robot_control node -->
+  <include file="$(find rbcar_robot_control)/launch/rbcar_robot_control.launch"/>
+
+  <!-- start laser filter -->
+  <include file="$(find rbcar_sim_bringup)/launch/my_laser_filter.launch"/>
+  
+  <!-- start twist to ackerman converter -->
+  <node pkg="rbcar_nav" type="cmd_vel_to_ackermann_drive.py" name="cmd_vel_to_ackermann_drive"    	output="screen">
+  </node>
+
+  <!-- start pointcloud to laser scan -->
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+
+      <remap from="cloud_in" to="/velodyne_points"/>
+      <remap from="scan" to="/velodyne/scan"/>
+        <rosparam>
+          target_frame: base_link # Leave disabled to output scan in pointcloud frame
+          transform_tolerance: 0.01
+          min_height: 0.02
+          max_height: 2.5
+
+          angle_min: -1.5708 # -M_PI/2
+          angle_max: 1.5708 # M_PI/2
+          angle_increment: 0.0087 # M_PI/360.0
+          scan_time: 0.3333
+          range_min: 0.45
+          range_max: 100
+          use_inf: true
+          inf_epsilon: 1.0
+
+          # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+          # 0 : Detect number of cores
+          # 1 : Single threaded
+          # 2->inf : Parallelism level
+          concurrency_level: 1
+      </rosparam>
+  </node>
+</launch>
