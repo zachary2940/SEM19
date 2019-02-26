@@ -95,7 +95,7 @@ class GetPath(State):
         # Wait for published waypoints
         while not self.path_ready:
             try:
-                pose = rospy.wait_for_message(topic, PoseWithCovarianceStamped, timeout=1)
+                pose = rospy.wait_for_message(topic, PoseWithCovarianceStamped, timeout=0.1)
             except rospy.ROSException as e:
                 if 'timeout exceeded' in e.message:
                     continue  # no new waypoint within timeout, looping...

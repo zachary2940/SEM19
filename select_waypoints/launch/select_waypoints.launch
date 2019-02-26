@@ -1,0 +1,5 @@
+<launch>  
+  <node pkg="select_waypoints" type="select_waypoints.py" name="select_waypoints" output="screen" clear_params="true">
+    <param name="waypoints_file" value="$(find select_waypoints)/waypoints/gas_station.csv"/>
+  </node>
+</launch>
