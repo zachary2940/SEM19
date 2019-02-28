@@ -1,0 +1,1 @@
+controller_joint_names: [lidar_joint, radar_joint, zed_camera_center_joint, zed_left_camera_joint, zed_right_camera_joint]

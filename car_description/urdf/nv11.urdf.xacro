@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<robot name="nv11" xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+
+	<!-- Car Chassis -->
+	<xacro:include filename="$(find car)/urdf/bases/car_base.urdf.xacro" />
+	<xacro:include filename="$(find car)/urdf/wheels/car_wheels.urdf.xacro" />
+
+	<!-- Sensors -->
+	<xacro:include filename="$(find car)/urdf/sensors/zed_camera.urdf.xacro" />
+	<xacro:include filename="$(find car)/urdf/sensors/vlp16.urdf.xacro" />
+	<xacro:include filename="$(find car)/urdf/sensors/ti_radar.urdf.xacro" />
+	<xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+	<xacro:include filename="$(find robotnik_sensors)/urdf/all_sensors.urdf.xacro" />
+
+	<!-- Global Variables -->
+	<xacro:property name="PI" value="3.1415926535897931"/>
+  
+	<!-- Wheel parameters -->
+	<xacro:property name="wheel_offset_x" value="1.0" />    <!-- x,y,z in translation from base_link to the center of the wheel -->
+	<xacro:property name="wheel_offset_y" value="0.75" />    
+	<xacro:property name="wheel_offset_z" value="0.0" />
+
+	<!-- *************** -->
+	<!-- Robots Elements -->
+	<!-- *************** -->
+
+	<!-- Here we create the robot elements using the xacro:macros imported at the beggining of this file -->
+	<xacro:car_base name="car" publish_bf="true"/>
+	
+	<!-- Gazebo ros control pluggins -->
+	<xacro:ros_control/>
+
+	<!-- Wheels -->
+		<xacro:front_wheel lr_prefix="left" fr_prefix="front"
+						lr_reflect="1" fr_reflect="1" xyz="-0.01596 0.51686 0.24885"/>
+		<xacro:front_wheel lr_prefix="right" fr_prefix="front"
+							lr_reflect="-1" fr_reflect="1" xyz="-0.01596 -0.51686 0.24885"/>
+		<xacro:rear_wheel lr_prefix="left" fr_prefix="rear"
+							lr_reflect="1" fr_reflect="-1" xyz="-2.08596 0.51686 0.24885"/>
+		<xacro:rear_wheel lr_prefix="right" fr_prefix="rear"
+							lr_reflect="-1" fr_reflect="-1" xyz="-2.08596 -0.51686 0.24885"/>
+
+	<!-- Put in Sensors -->
+	<!-- <xacro:zed_camera parent="base_link">
+		<origin xyz="-0.788 0 1.176" rpy="0 0 0"/>
+	</xacro:zed_camera> -->
+
+	<!-- <xacro:vlp16 name="vlp16" parent="base_link">
+		<origin xyz="0 1.381 1.22877" rpy="0 0 0" />
+	</xacro:vlp16> -->
+
+	<xacro:ti_radar parent="base_link">
+		<origin xyz=" 0.68778 0 0.380" rpy="0 0 0" />
+	</xacro:ti_radar>
+
+	<!-- simulated sensors -->
+	<xacro:sensor_imu prefix="imu" parent="base_link">
+		<origin xyz="0.0 0.0 0.170" rpy="0 0 0"/>
+	</xacro:sensor_imu>
+
+	<xacro:sensor_kinect prefix="zed" parent="base_link">
+		<origin xyz="-0.788 0 1.176" rpy="0 0 0"/> 
+	</xacro:sensor_kinect>  
+
+	<xacro:VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="440">
+		<origin xyz="-1.381 0 1.22877" rpy="0 0 0" />
+	</xacro:VLP-16>
+</robot>
+
