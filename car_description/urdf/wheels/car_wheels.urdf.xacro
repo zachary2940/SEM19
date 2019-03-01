@@ -19,11 +19,12 @@
        vertical wheel travel. -->
   <xacro:property name="wheelbase" value="2.07"/>
   <xacro:property name="hex_hub_dist" value="1.06296"/>  <!-- 1.127 0.742 0.900 check -->
-  <xacro:property name="axle_length" value="0"/> 
+  <xacro:property name="axle_length" value="0.12"/> 
   <xacro:property name="wheel_travel" value="0"/>
   <xacro:property name="shock_z_offset" value="0.00"/>
 
   <!-- Degree-to-radian conversions -->
+  <xacro:property name="degrees_30" value="0.523599" />
   <xacro:property name="degrees_45" value="0.785398163"/>
   <xacro:property name="degrees_90" value="1.57079633"/>
   <xacro:property name="degrees_180" value="3.14159265"/>
@@ -202,7 +203,7 @@
       <parent link="${lr_prefix}_steering_link"/>
       <child link="${lr_prefix}_${fr_prefix}_axle_carrier"/>
       <axis xyz="0 0 1"/>
-      <limit lower="${-degrees_45}" upper="${degrees_45}"
+      <limit lower="${-degrees_30}" upper="${degrees_30}"
              effort="${servo_stall_torque}" velocity="${servo_no_load_speed}"/>
     </joint>
 
