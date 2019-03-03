@@ -24,6 +24,7 @@
   <xacro:property name="shock_z_offset" value="0.00"/>
 
   <!-- Degree-to-radian conversions -->
+  <xacro:property name="degrees_20" value="0.349066" />
   <xacro:property name="degrees_30" value="0.523599" />
   <xacro:property name="degrees_45" value="0.785398163"/>
   <xacro:property name="degrees_90" value="1.57079633"/>
@@ -203,7 +204,7 @@
       <parent link="${lr_prefix}_steering_link"/>
       <child link="${lr_prefix}_${fr_prefix}_axle_carrier"/>
       <axis xyz="0 0 1"/>
-      <limit lower="${-degrees_30}" upper="${degrees_30}"
+      <limit lower="${-degrees_20}" upper="${degrees_20}"
              effort="${servo_stall_torque}" velocity="${servo_no_load_speed}"/>
     </joint>
 
