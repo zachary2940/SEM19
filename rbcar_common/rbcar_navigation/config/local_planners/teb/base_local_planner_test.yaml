@@ -7,7 +7,7 @@ TebLocalPlannerROS:
   # Trajectory
 
   teb_autosize: True
-  dt_ref: 0.6
+  dt_ref: 0.5
   dt_hysteresis: 0.1
   global_plan_overwrite_orientation: False
   max_global_plan_lookahead_dist: 15
@@ -15,10 +15,10 @@ TebLocalPlannerROS:
 
   # Robot
 
-  max_vel_x: 5.0
+  max_vel_x: 6.0
   max_vel_x_backwards: 0.2
   max_vel_y: 0.0
-  max_vel_theta: 0.349066
+  max_vel_theta: 0.849066
   acc_lim_x: 1.0
   acc_lim_y: 0.0
   acc_lim_theta: 0.2
@@ -29,15 +29,15 @@ TebLocalPlannerROS:
     #type: "point"
     #type: "circular"
     radius: 0.6
-    #type: "line"
-    #line_start: [-0.6, 0.0]
-    #line_end: [0.6, 0.0]
+    type: "line"
+    line_start: [-0.6, 0.0]
+    line_end: [0.6, 0.0]
     #type: "two_circles"
     #front_offset: 0.2
     #front_radius: 0.2
     #rear_offset: 0.2
     #rear_radius: 0.2
-    type: "polygon"
+    #type: "polygon"
     vertices:
       [[-0.25, -0.51686], [1.82, -0.51686], [1.82, 0.51686], [-0.25, 0.51686]]
 

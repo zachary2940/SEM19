@@ -10,10 +10,10 @@
     </joint>
     <link name="radar_link">
         <visual>
-            <origin xyz="0 50 50" rpy="0 0 0"/>
-            <geometry>
+            <origin xyz="0 0 1.5" rpy="0 0 0"/>
+            <!--<geometry>
                 <mesh filename="package://car/meshes/lidar.STL" />
-            </geometry>
+            </geometry>-->
             <material name="light_grey">
                 <color rgba="0.8 0.8 0.8 0.8"/>
             </material>

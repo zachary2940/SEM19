@@ -9,7 +9,7 @@
     <!-- Robot mechanical and motor parameters -->
     <xacro:property name="PI" value="3.1415926535897931"/>
     <!-- TODO: CHANGE WHEEL WIDTH -->
-    <xacro:property name="wheel_width" value="0.175" />
+    <xacro:property name="wheel_width" value="0.275" />
     <xacro:property name="clearance" value="0" />
     
     <!-- BASE FOOTPRINT -->
@@ -24,7 +24,7 @@
         </link>
 
         <joint name="base_footprint_joint" type="fixed">
-        <origin xyz="0 0 ${clearance}" rpy="0 0 0" />  <!-- height is the clearance -->
+        <origin xyz="0 0 ${clearance}" rpy="0 0 0" />  
         <parent link="base_footprint"/>
         <child link="base_link" />
         </joint>    
@@ -33,9 +33,9 @@
     <!-- BASE_LINK -->
     <link name="base_link">
         <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="-1.1 0 0" rpy="0 0 0" />
         <mass value="230" />
-        <inertia
+         <inertia
             ixx="0.93313"
             ixy="-0.17064"
             ixz="0.0039682"
@@ -46,7 +46,8 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://car/meshes/base_link.STL" />
+             <mesh filename="package://car/meshes/base_link.STL" />
+	    <box size="0.001 0.001 0.001" />	
         </geometry>
         <material name="">
             <color rgba="0.79216 0.81961 0.93333 1" />
@@ -55,7 +56,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://car/meshes/base_link.STL" />
+            <box size="0.001 0.001 0.001" />
         </geometry>
         </collision>
     </link>

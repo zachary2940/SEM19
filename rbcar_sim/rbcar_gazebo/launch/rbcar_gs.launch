@@ -10,7 +10,7 @@
   
   <!-- include file="$(find rbcar_pad)/launch/rbcar_pad.launch" / -->
   <!-- use a pad that publishes geometry_msgs::Twist refs -->
-  <include file="$(find summit_xl_pad)/launch/summit_xl_pad.launch"/>
+  <!--<include file="$(find summit_xl_pad)/launch/summit_xl_pad.launch"/>-->
   
   <!-- transform these vel msgs to robot commands via the twist2ack node -->
   <node name="twist2ack" pkg="rbcar_twist2ack" type="twist2ack.py" respawn="true" output="screen"/>
@@ -27,10 +27,10 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
-         command="$(find xacro)/xacro '$(find car)/urdf/nv11.urdf.xacro' --inorder" />
+         command="$(find xacro)/xacro '$(find car)/urdf/nv11.urdf.xacro'" />
 
   <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-        args="-urdf -model rbcar -param robot_description -x -5 -y -8 -z 1"/>
+        args="-urdf -model rbcar -param robot_description -x -5 -y -8 -z 0"/>
 
 </launch>

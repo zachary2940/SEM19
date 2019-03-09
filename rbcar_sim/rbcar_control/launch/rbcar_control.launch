@@ -27,10 +27,10 @@
     <remap from="/joint_states" to="/rbcar/joint_states" />
   </node>
   
-  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+  <!--<node pkg="twist_mux" type="twist_mux" name="twist_mux">
     <rosparam command="load" file="$(find rbcar_control)/config/twist_mux.yaml" />    
     <remap from="cmd_vel_out" to="/cmd_vel_out" />
-  </node>
+  </node>-->
   
 
 </launch>
