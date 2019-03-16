@@ -15,31 +15,31 @@ TebLocalPlannerROS:
 
   # Robot
 
-  max_vel_x: 6.0
+  max_vel_x: 15.0
   max_vel_x_backwards: 0.2
   max_vel_y: 0.0
-  max_vel_theta: 0.849066
+  max_vel_theta: 1.849066
   acc_lim_x: 1.0
   acc_lim_y: 0.0
   acc_lim_theta: 0.2
-  min_turning_radius: 1.0
-  wheelbase: 2.07
+  min_turning_radius: 0.6
+  wheelbase: 2.1
   cmd_angle_instead_rotvel: true # set true in ackermann mode
   footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
     #type: "point"
     #type: "circular"
-    radius: 0.6
+    #radius: 0.6
     type: "line"
-    line_start: [-0.6, 0.0]
-    line_end: [0.6, 0.0]
+    line_start: [-1.035, 0.0]
+    line_end: [1.035, 0.0]
     #type: "two_circles"
     #front_offset: 0.2
     #front_radius: 0.2
     #rear_offset: 0.2
     #rear_radius: 0.2
     #type: "polygon"
-    vertices:
-      [[-0.25, -0.51686], [1.82, -0.51686], [1.82, 0.51686], [-0.25, 0.51686]]
+    #vertices:
+     # [[-0.25, -0.51686], [1.82, -0.51686], [1.82, 0.51686], [-0.25, 0.51686]]
 
   # GoalTolerance
 

@@ -14,7 +14,7 @@
         <pose>0 0 0  0 0 0</pose>
         <visual name="track_course_visual">
           <geometry>
-            <mesh><uri>/home/zachary/cost_map/src/NV11_catvehicle/rbcar_sim/rbcar_gazebo/worlds/track01.dae</uri></mesh>
+            <mesh><uri>/home/zachary/Desktop/nv11_model/src/NV11_catvehicle/rbcar_sim/rbcar_gazebo/worlds/track01.dae</uri></mesh>
           </geometry>
         </visual>
         <collision name = "collision">
