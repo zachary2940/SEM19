@@ -15,15 +15,15 @@ TebLocalPlannerROS:
 
   # Robot
 
-  max_vel_x: 15.0
-  max_vel_x_backwards: 0.2
+  max_vel_x: 4.0
+  max_vel_x_backwards: 0.1
   max_vel_y: 0.0
-  max_vel_theta: 1.849066
+  max_vel_theta: 1.249066
   acc_lim_x: 1.0
   acc_lim_y: 0.0
   acc_lim_theta: 0.2
-  min_turning_radius: 0.6
-  wheelbase: 2.1
+  min_turning_radius: 2
+  wheelbase: 2.07
   cmd_angle_instead_rotvel: true # set true in ackermann mode
   footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
     #type: "point"
@@ -59,7 +59,7 @@ TebLocalPlannerROS:
   #costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSConcaveHull"
   #costmap_converter_plugin: "" # deactivate plugin
   costmap_converter_spin_thread: True
-  costmap_converter_rate: 5
+  costmap_converter_rate: 10
   # costmap_converter/CostmapToLinesDBSRANSAC:
   #    cluster_max_distance: 0.4
 

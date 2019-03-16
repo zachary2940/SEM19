@@ -11,7 +11,7 @@
   <xacro:property name="tire_width" value="0.095"/>
 
   <xacro:property name="hex_hub_depth" value="0.05223"/> <!-- or +0.072 -->
-  <xacro:property name="wheel_mass" value="8.0"/>   <!-- check -->
+  <xacro:property name="wheel_mass" value="3.3"/>   <!-- check -->
 
   <!-- hex_hub_dist is the distance between left and right hex hubs when
        the shock absorbers are fully extended. axle_length is the distance
@@ -54,7 +54,7 @@
   <!-- Servo_stall_torque of the direction axis in Nm. servo_no_load_speed is
        measured in rad/s. -->
   <xacro:property name="servo_stall_torque" value="50"/>  <!-- check -->
-  <xacro:property name="servo_no_load_speed" value="25"/> <!-- check -->
+  <xacro:property name="servo_no_load_speed" value="50"/> <!-- check -->
 
   <!-- Inertia of a thick-walled cylindrical tube with open ends. Height is
        measured along the z axis, which is the tube's axis. inner_rad and

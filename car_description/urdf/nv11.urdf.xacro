@@ -44,13 +44,13 @@
 		<origin xyz="0.68778 0 0.380" rpy="0 0 0" />
 	</xacro:zed_camera> -->
 
-	<!-- <xacro:vlp16 name="vlp16" parent="base_link">
-		<origin xyz="0 1.381 1.22877" rpy="0 0 0" />
-	</xacro:vlp16> -->
+	<!--<xacro:vlp16 name="vlp16" parent="base_link">
+		<origin xyz="-1.381 0 1.22877" rpy="0 0 0" />
+	</xacro:vlp16> 
 
 	<xacro:ti_radar parent="base_link">
 		<origin xyz="0.68778 0 0.380" rpy="0 0 0" />
-	</xacro:ti_radar>
+	</xacro:ti_radar>-->
 
 	<!-- simulated sensors -->
 	<xacro:sensor_imu prefix="imu" parent="base_link">
@@ -62,7 +62,7 @@
 	</xacro:sensor_kinect>  
 
 	<xacro:VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="440">-->
-		<origin xyz="0 0 1.22877" rpy="0 0 0" />
+		<origin xyz="-1.381 0 1.22877" rpy="0 0 0" />
 	</xacro:VLP-16>
 </robot>
 
