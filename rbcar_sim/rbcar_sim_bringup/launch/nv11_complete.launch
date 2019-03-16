@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find rbcar_sim_bringup)/launch/rbcar_complete_gs.launch"/>
+  <include file="$(find rbcar_localization)/launch/amcl.launch"/>
+  <include file="$(find rbcar_nav)/launch/move_base.launch"/>
+  <include file="$(find rbcar_description)/launch/rbcar_rviz.launch"/>
+</launch>
