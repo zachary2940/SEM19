@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /LaserScan1
         - /Map2
-        - /PointCloud21
       Splitter Ratio: 0.5
     Tree Height: 595
   - Class: rviz/Selection
@@ -98,10 +97,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        radar_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         right_front_axle_carrier:
           Alpha: 1
           Show Axes: false
@@ -186,8 +181,6 @@ Visualization Manager:
           Value: true
         odom:
           Value: true
-        radar_link:
-          Value: true
         right_front_axle_carrier:
           Value: true
         right_front_wheel:
@@ -231,8 +224,6 @@ Visualization Manager:
                   left_front_axle_carrier:
                     left_front_wheel:
                       {}
-                radar_link:
-                  {}
                 right_rear_axle_carrier:
                   right_rear_wheel:
                     {}
@@ -359,41 +350,11 @@ Visualization Manager:
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: false
+      Enabled: true
       Name: Map
       Topic: /move_base/local_costmap/costmap
       Unreliable: false
       Use Timestamp: false
-      Value: false
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/PointCloud2
-      Color: 255; 255; 255
-      Color Transformer: Intensity
-      Decay Time: 0
-      Enabled: true
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Max Intensity: 0
-      Min Color: 0; 0; 0
-      Min Intensity: 0
-      Name: PointCloud2
-      Position Transformer: XYZ
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 1
-      Style: Flat Squares
-      Topic: /velodyne_points
-      Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
