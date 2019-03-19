@@ -16,7 +16,7 @@
     <xacro:if value="${publish_bf}">
         <link name="base_footprint">
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="-0.01596 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="0.001 0.001 0.001" />
             </geometry>
@@ -24,7 +24,7 @@
         </link>
 
         <joint name="base_footprint_joint" type="fixed">
-        <origin xyz="0 0 ${clearance}" rpy="0 0 0" />  
+        <origin xyz="-0.01596 0 ${clearance}" rpy="0 0 0" />  
         <parent link="base_footprint"/>
         <child link="base_link" />
         </joint>    
@@ -33,18 +33,18 @@
     <!-- BASE_LINK -->
     <link name="base_link">
         <inertial>
-        <origin xyz="-1.1 0 0" rpy="0 0 0" />
-        <mass value="230" />
-         <inertia
-            ixx="0.93313"
-            ixy="-0.17064"
-            ixz="0.0039682"
-            iyy="0.69622"
-            iyz="-0.049966"
-            izz="0.47227" />
+        <origin xyz="0.4 0 0" rpy="0 0 0" />
+        <mass value="192.69" />
+        <inertia
+        ixx="33.169"
+        ixy="-1.105"
+        ixz="-9.0191"
+        iyy="117.15"
+        iyz="1.4735"
+        izz="118.94" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="2.07 0 0" rpy="0 0 0" />
         <geometry>
              <mesh filename="package://car/meshes/base_link.STL" />
 	    <box size="0.001 0.001 0.001" />	
@@ -54,7 +54,6 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <box size="0.001 0.001 0.001" />
         </geometry>

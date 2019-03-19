@@ -8,7 +8,7 @@
 <arg name="map_topic" default="map"/>
 <arg name="global_frame" default="map"/>
 <arg name="odom_frame" default="odom"/>
-<arg name="base_frame" default="base_footprint"/>
+<arg name="base_frame" default="base_link"/>
 <arg name="odom_model_type" default="diff"/> <!-- omni -->
 
 <node pkg="amcl" type="amcl" name="amcl" output="screen">

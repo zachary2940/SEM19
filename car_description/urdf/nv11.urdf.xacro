@@ -31,13 +31,13 @@
 
 	<!-- Wheels -->
 		<xacro:front_wheel lr_prefix="left" fr_prefix="front"
-						lr_reflect="1" fr_reflect="1" xyz="-0.01596 0.51686 0.24885"/>
+						lr_reflect="1" fr_reflect="1" xyz="2.05404 0.51686 0.24885"/>
 		<xacro:front_wheel lr_prefix="right" fr_prefix="front"
-							lr_reflect="-1" fr_reflect="1" xyz="-0.01596 -0.51686 0.24885"/>
+							lr_reflect="-1" fr_reflect="1" xyz="2.05404 -0.51686 0.24885"/>
 		<xacro:rear_wheel lr_prefix="left" fr_prefix="rear"
-							lr_reflect="1" fr_reflect="-1" xyz="-2.08596 0.51686 0.24885"/>
+							lr_reflect="1" fr_reflect="-1" xyz="-0.01596 0.51686 0.24885"/>
 		<xacro:rear_wheel lr_prefix="right" fr_prefix="rear"
-							lr_reflect="-1" fr_reflect="-1" xyz="-2.08596 -0.51686 0.24885"/>
+							lr_reflect="-1" fr_reflect="-1" xyz="-0.01596 -0.51686 0.24885"/>
 
 	<!-- Put in Sensors -->
 	<!-- <xacro:zed_camera parent="base_link">
@@ -54,15 +54,15 @@
 
 	<!-- simulated sensors -->
 	<xacro:sensor_imu prefix="imu" parent="base_link">
-		<origin xyz="0.0 0.0 0.170" rpy="0 0 0"/>
+		<origin xyz="2.07 0.0 0.170" rpy="0 0 0"/>
 	</xacro:sensor_imu>
 
 	<xacro:sensor_kinect prefix="zed" parent="base_link">
-		<origin xyz="0.68778 0 0.380" rpy="0 0 0" />
+		<origin xyz="2.75778 0 0.380" rpy="0 0 0" />
 	</xacro:sensor_kinect>  
 
 	<xacro:VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="10" samples="440">-->
-		<origin xyz="-1.381 0 1.22877" rpy="0 0 0" />
+		<origin xyz="0.689 0 1.22877" rpy="0 0 0" />
 	</xacro:VLP-16>
 </robot>
 
