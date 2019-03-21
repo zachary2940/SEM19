@@ -329,8 +329,8 @@ void UpdateControl()
   double alfa_ref_right = 0.0;
   if (alfa_ref_!=0.0) {  // div/0
      d1 =  d / tan (alfa_ref_);
-     alfa_ref_left = atan2( d, d1 - 0.105);
-     alfa_ref_right = atan2( d, d1 + 0.105);
+     alfa_ref_left = atan2( d, d1 - 0.51686);
+     alfa_ref_right = atan2( d, d1 + 0.51686);
      if (alfa_ref_<0.0) {
 		alfa_ref_left = alfa_ref_left - PI;
 		alfa_ref_right = alfa_ref_right - PI;
@@ -530,7 +530,7 @@ void setCommand(const ackermann_msgs::AckermannDriveStamped &msg)
 {   
     // Mapping - linear = v_ref_, angular = alfa_ref_ 
 	double speed_limit = 10.0;  // m/s
-	double angle_limit = PI/4.0;   // there should be also urdf limits
+	double angle_limit = PI/9.0;   // there should be also urdf limits
     v_ref_ = saturation(msg.drive.speed, -speed_limit, speed_limit);  
     alfa_ref_ = saturation(msg.drive.steering_angle, -angle_limit, angle_limit);
 }
