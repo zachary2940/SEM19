@@ -75,6 +75,7 @@ class WaypointSelector(object):
             rospy.loginfo("To cancel the goal: 'rostopic pub -1 /move_base/cancel actionlib_msgs/GoalID -- {}'")
             self.client.send_goal(goal)
             self.client.wait_for_result()
+            rospy.loginfo('Goal arrived')
         return 'success'
 
     def getPoseWithCovariance(self, row):
