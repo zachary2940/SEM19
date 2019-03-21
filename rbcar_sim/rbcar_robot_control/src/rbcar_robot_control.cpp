@@ -329,8 +329,8 @@ void UpdateControl()
   double alfa_ref_right = 0.0;
   if (alfa_ref_!=0.0) {  // div/0
      d1 =  d / tan (alfa_ref_);
-     alfa_ref_left = atan2( d, d1 - 0.51686);
-     alfa_ref_right = atan2( d, d1 + 0.51686);
+     alfa_ref_left = atan2( d, d1 - 0.105);
+     alfa_ref_right = atan2( d, d1 + 0.105);
      if (alfa_ref_<0.0) {
 		alfa_ref_left = alfa_ref_left - PI;
 		alfa_ref_right = alfa_ref_right - PI;

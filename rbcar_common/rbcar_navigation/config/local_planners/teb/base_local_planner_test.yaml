@@ -69,7 +69,7 @@ TebLocalPlannerROS:
   optimization_activate: True
   optimization_verbose: False
   penalty_epsilon: 0.01
-  weight_max_vel_x: 1
+  weight_max_vel_x: 2
   weight_max_vel_y: 1
   weight_max_vel_theta: 1
   weight_acc_lim_x: 1
