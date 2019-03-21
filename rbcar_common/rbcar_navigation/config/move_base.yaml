@@ -13,8 +13,8 @@ recovery_behaviors:
 car_maneuver_recovery:
   four_wheel_steering: True
   crab_steering: True
-  recovery_speed: 0.4
-  recovery_steering_angle: 0.4
+  recovery_speed: 0.1
+  recovery_steering_angle: 0.349
   wheelbase: 2.07
   extra_footprint_padding: 0.01
   escape_cost_threshold: 128
