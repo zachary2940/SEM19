@@ -24,11 +24,12 @@ def cmd_callback(data):
   v = data.linear.x
   steering = data.angular.z
   # steering = convert_trans_rot_vel_to_steering_angle(v, data.angular.z, wheelbase)
-  
+  steering = min(steering,0.349)
+  steering = max(steering, -0.349)
   msg = AckermannDriveStamped()
   msg.header.stamp = rospy.Time.now()
   msg.header.frame_id = frame_id
-  msg.drive.steering_angle = steering
+  msg.drive.steering_angle = steering*(175/0.349)
   msg.drive.speed = v
   
   pub.publish(msg)
