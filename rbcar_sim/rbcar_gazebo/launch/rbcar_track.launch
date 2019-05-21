@@ -7,7 +7,7 @@
 
   <!-- rbcar_control launch file -->
   <include file="$(find rbcar_control)/launch/rbcar_control.launch" />
-  
+
   <!-- include file="$(find rbcar_robot_control)/launch/rbcar_robot_control.launch"/ -->
 
   <!-- rbcar_joy launch file -->
@@ -32,9 +32,9 @@
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
          command="$(find xacro)/xacro '$(find car)/urdf/nv11.urdf.xacro' --inorder" />
-         
+
   <!-- Call a python script to the run a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
         args="-urdf -model rbcar -param robot_description -x 0 -y 0 -Y 0"/>
 
-</launch> 
+</launch>
